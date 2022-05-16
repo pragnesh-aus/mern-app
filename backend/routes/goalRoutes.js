@@ -9,6 +9,6 @@ const {
 // GET & POST with chaining
 router.route("/").get(getGoals).post(setGoal);
 // UPDATE & DELETE with chaining
-router.route("/:id").put(updateGoal).delete(deleteGoal);
+router.route("/:id").delete(deleteGoal).put(updateGoal);
 
 module.exports = router;
