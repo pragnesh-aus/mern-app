@@ -9,6 +9,7 @@ const getGoals = (req, res) => {
 // @route POST /api/goal
 // @access Private
 const setGoal = (req, res) => {
+  console.log(req.body);
   res.status(200).json({ message: "Set goal" });
 };
 
