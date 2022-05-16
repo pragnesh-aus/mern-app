@@ -6,13 +6,9 @@ const {
   updateGoal,
   deleteGoal,
 } = require("../controllers/goalController");
-// GET
-router.get("/", getGoals);
-// POST
-router.post("/", setGoal);
-// UPDATE
-router.put("/:id", updateGoal);
-// DELETE
-router.delete("/:id", deleteGoal);
+// GET & POST with chaining
+router.route("/").get(getGoals).post(setGoal);
+// UPDATE & DELETE with chaining
+router.route("/:id").put(updateGoal).delete(deleteGoal);
 
 module.exports = router;
